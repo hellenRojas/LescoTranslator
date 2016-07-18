@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Hellen Rojas\.gradle\caches\modules-2\files-2.1\io.realm\realm-annotations\1.1.0\4459414c171c7b60cdc2f089ffa72d19d773835e\realm-annotations-1.1.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="4459414c171c7b60cdc2f089ffa72d19d773835e">
+        <dex dex="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\transforms\dex\debug\folders\1000\10\realm-annotations-1.1.0_c62e9204388aa9531112cee4853c263c5cc1f0ee\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="d09d0f55731f64c0cb180e883d29dab12699b463">
+        <dex dex="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_be89e768082638805d48ae31f90da7bf1cde927e\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
+        <dex dex="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.0.0_7155159b3a8b1ccbf8127db9315ba1c0a8bfff35\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_f4e8493bf2334e51c838a0664f221f5eb7937045\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\exploded-aar\io.realm\realm-android-library\1.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="db73bb0b63ec60c9467b564baaf7c1e5d469c9f2">
+        <dex dex="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\transforms\dex\debug\folders\1000\10\io.realm-realm-android-library-1.1.0_020e3a825a881b4ea6cc47b589c127bbe5fa65ea\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Hellen Rojas\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\24.0.0\2943c74db6d4346ab8c6531adac91fa05c137c40\support-annotations-24.0.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.0.0_4b302d05904a4b396cbda285f356343f00aab36a\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="f1afed5fe3aa7036cdd6eae0f38e45f411d7e36b">
+        <dex dex="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_e770c0bfac686e2e10814d0f3434db8a83c93527\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.0.0_448566e3da675ff7d9fa9f085271fecc4c40dbb4\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.0.0_d82d81b3d2816dc14a008cb79ccb163eb47090a4\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\exploded-aar\com.getkeepsafe.relinker\relinker\1.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="264f0bc4c0680cfe7a60fea1f12a43f1ab48e7c8">
+        <dex dex="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.getkeepsafe.relinker-relinker-1.2.1_5c5326f76627428d7ae77140894c1527324afe2f\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
+        <dex dex="C:\Users\Hellen Rojas\Documents\LescoTranslator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.0.0_57cf1dfc86e844e4e97653c4870892e7fd89d54b\classes.dex" />
+    </item>
+
+</items>

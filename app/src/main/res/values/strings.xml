@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">LescoTranslator</string>
+    <string name="app_name">VoiceToText</string>
+    <string name="result"></string>
+    <string name="microphone">Microphone</string>
+    <string name="order">Dí algo</string>
+    <string name="notification">Lo sentimos, su dispositivo no puede procesar información
+        proveniente de un micrófono.</string>
 </resources>
