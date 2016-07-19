@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.alexiscr.lescotranslator.R;
@@ -26,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         ImageButton imageButtonMicrophone;
         imageButtonMicrophone = (ImageButton) findViewById(R.id.imageButtonMicrophone);
         assert imageButtonMicrophone != null;
-
     }
 
     public void onClickButton(View v) {
