@@ -14,6 +14,7 @@ import com.example.alexiscr.lescotranslator.R;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Handler;
 
 public class TranslatorActivity extends AppCompatActivity {
     private ImageSwitcher sw;
@@ -24,19 +25,14 @@ public class TranslatorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_translator);
 
-        TimerTask task = new TimerTask() {
+        sw.postDelayed(new Runnable() {
+
             @Override
             public void run() {
-
                 sw.setImageResource(R.drawable.g);
-                finish();
             }
-        };
 
-        // Simulate a long loading process on application startup.
-        Timer timer = new Timer();
-        timer.schedule(task, IMAGE_DELAY);
-
+        }, 5000); 
 
 
         b1 = (ImageButton) findViewById(R.id.btn_rew);
