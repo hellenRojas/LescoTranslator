@@ -22,7 +22,8 @@
             android:layout_width="301dp"
             android:layout_height="313dp"
             android:id="@+id/imageSwitcher"
-            android:foregroundGravity="center" />
+            android:foregroundGravity="center"
+            android:layout_gravity="center" />
     </LinearLayout>
 
     <LinearLayout

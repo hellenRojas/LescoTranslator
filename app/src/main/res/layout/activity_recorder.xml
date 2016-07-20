@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".UI.RecorderActivity">
+    tools:context=".UI.RecorderActivity"
+    android:background="@color/mainbackground">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -17,7 +18,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:weightSum="1"
-        android:id="@+id/linearLayout">
+        android:id="@+id/linearLayout"
+        android:gravity="center">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -48,10 +50,11 @@
                 android:id="@+id/imageButtonMicrophone"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/microphone_icon"
+                android:src="@drawable/icon-microphone"
                 android:contentDescription="@null"
                 android:onClick="onClickButton"
-                android:nestedScrollingEnabled="true" />
+                android:nestedScrollingEnabled="true"
+                android:background="@drawable/circle" />
 
             <EditText
                 android:layout_width="wrap_content"
