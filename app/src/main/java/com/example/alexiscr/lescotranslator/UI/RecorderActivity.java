@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.alexiscr.lescotranslator.Logic.DB.DataBaseInitializer;
 import com.example.alexiscr.lescotranslator.R;
 
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ public class RecorderActivity extends AppCompatActivity {
         imageButtonMicrophone = (ImageButton) findViewById(R.id.imageButtonMicrophone);
         btnTranslate = (Button) findViewById(R.id.btnTranslate);
         assert imageButtonMicrophone != null;
-
+        new DataBaseInitializer().initializeDatabase(getApplicationContext());
     }
 
     public void onClickButton(View v) {

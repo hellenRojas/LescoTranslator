@@ -15,7 +15,6 @@
         <activity android:name=".UI.TranslatorActivity">
 
         </activity>
-        <activity android:name=".UI.MainActivity" />
         <activity android:name=".UI.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

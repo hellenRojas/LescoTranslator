@@ -50,7 +50,7 @@
                 android:id="@+id/imageButtonMicrophone"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/icon-microphone"
+                android:src="@drawable/icon_microphone"
                 android:contentDescription="@null"
                 android:onClick="onClickButton"
                 android:nestedScrollingEnabled="true"
