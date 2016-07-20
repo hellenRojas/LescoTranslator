@@ -1,6 +1,7 @@
 package com.example.alexiscr.lescotranslator.Logic.Core;
 
 import io.realm.RealmObject;
+import io.realm.annotations.Ignore;
 import io.realm.annotations.PrimaryKey;
 
 /**
@@ -10,6 +11,8 @@ public class LescoObject extends RealmObject {
     @PrimaryKey
     private String word;
     private byte[] image;
+    @Ignore
+    private boolean chunk;
 
     public LescoObject(){}
 
@@ -25,4 +28,8 @@ public class LescoObject extends RealmObject {
     public byte[] getImage(){
         return image;
     }
+
+    public boolean isChunk() { return chunk; }
+
+    public void setChunk(boolean chunkState) { this.chunk = chunkState; }
 }

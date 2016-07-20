@@ -36,7 +36,7 @@ public class DataBaseInitializer extends AppCompatActivity {
                 temporalName = temporalName.substring(temporalName.lastIndexOf("/") + 1);
                 temporalImage = BitmapFactory.decodeResource(context.getResources(), resourceID);
                 if(temporalName.length() > 6 && "ltimg".equals(temporalName.substring(0, 5))){
-                    LescoObject newLescoObject = new LescoObject(temporalName, ImageConverter.bitmapToByteArray(temporalImage));
+                    LescoObject newLescoObject = new LescoObject(temporalName.substring(6, temporalName.lastIndexOf(".")), ImageConverter.bitmapToByteArray(temporalImage));
                     realm.beginTransaction();
                     LescoObject newRealmLescoObject = realm.copyToRealm(newLescoObject);
                     realm.commitTransaction();
