@@ -8,9 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
-
+import com.example.alexiscr.lescotranslator.Logic.DataBaseInitializer;
 import com.example.alexiscr.lescotranslator.R;
 
 import java.util.ArrayList;
@@ -26,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton imageButtonMicrophone;
         imageButtonMicrophone = (ImageButton) findViewById(R.id.imageButtonMicrophone);
         assert imageButtonMicrophone != null;
-
+        new DataBaseInitializer().initializeDatabase(getApplicationContext());
     }
 
     public void onClickButton(View v) {
