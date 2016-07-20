@@ -6,6 +6,7 @@ import android.speech.RecognizerIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -17,6 +18,7 @@ import java.util.Locale;
 
 public class RecorderActivity extends AppCompatActivity {
     private EditText textViewResult;
+    private Button btnTranslate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +26,7 @@ public class RecorderActivity extends AppCompatActivity {
         textViewResult = (EditText) findViewById(R.id.textViewResult);
         ImageButton imageButtonMicrophone;
         imageButtonMicrophone = (ImageButton) findViewById(R.id.imageButtonMicrophone);
+        btnTranslate = (Button) findViewById(R.id.btnTranslate);
         assert imageButtonMicrophone != null;
 
     }
@@ -34,6 +37,12 @@ public class RecorderActivity extends AppCompatActivity {
                 startSpeechInput();
                 break;
         }
+    }
+
+    public void onClickTranslate(View v) {
+        Intent mainIntent = new Intent().setClass(
+                RecorderActivity.this, TranslatorActivity.class);
+        startActivity(mainIntent);
     }
 
     private void startSpeechInput(){

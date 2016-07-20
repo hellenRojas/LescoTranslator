@@ -1,25 +1,42 @@
 package com.example.alexiscr.lescotranslator.UI;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
-import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
 import com.example.alexiscr.lescotranslator.R;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class TranslatorActivity extends AppCompatActivity {
     private ImageSwitcher sw;
     private ImageButton b1,b2;
+    private static final long IMAGE_DELAY = 4000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_translator);
+
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+
+                sw.setImageResource(R.drawable.g);
+                finish();
+            }
+        };
+
+        // Simulate a long loading process on application startup.
+        Timer timer = new Timer();
+        timer.schedule(task, IMAGE_DELAY);
+
 
 
         b1 = (ImageButton) findViewById(R.id.btn_rew);
@@ -39,7 +56,6 @@ public class TranslatorActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Toast.makeText(getApplicationContext(), "previous Image",Toast.LENGTH_LONG).show();
                 sw.setImageResource(R.drawable.a);
             }
         });
@@ -47,7 +63,6 @@ public class TranslatorActivity extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Toast.makeText(getApplicationContext(), "Next Image",Toast.LENGTH_LONG).show();
                 sw.setImageResource(R.drawable.g);
             }
         });
