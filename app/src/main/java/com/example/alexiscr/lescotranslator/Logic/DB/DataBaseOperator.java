@@ -15,8 +15,8 @@ public class DataBaseOperator {
         return Realm.getDefaultInstance().where(LescoObject.class).equalTo("word", word.toLowerCase()).findFirst();
     }
 
-    public static ArrayList<LescoObject> wordSpell(String word){
-        ArrayList<LescoObject> letters = new ArrayList();
+    private static ArrayList<LescoObject> wordSpell(String word){
+        ArrayList<LescoObject> letters = new ArrayList<>();
         LescoObject actualLescoObject;
         int length = word.length() - 2;
         for(int i = 0; i < length; i++) {
@@ -32,13 +32,14 @@ public class DataBaseOperator {
 
     public static ArrayList<LescoObject> stringToLescoObjectArrayList(String string){
         String[] splitedString = string.split(" ");
-        ArrayList<LescoObject> lescoObjects = new ArrayList();
+        ArrayList<LescoObject> lescoObjects = new ArrayList<>();
         for(String word : splitedString){
             LescoObject temporalLescoObject = getLescoObjectByWord(word);
             if(temporalLescoObject == null)
                 lescoObjects.addAll(wordSpell(word));
             else
                 temporalLescoObject.setChunk(false);
+            lescoObjects.add(temporalLescoObject);
         }
         return lescoObjects;
     }

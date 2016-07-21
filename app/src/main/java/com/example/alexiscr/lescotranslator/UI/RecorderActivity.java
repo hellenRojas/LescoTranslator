@@ -11,7 +11,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.alexiscr.lescotranslator.Logic.Core.LescoObject;
 import com.example.alexiscr.lescotranslator.Logic.DB.DataBaseInitializer;
+import com.example.alexiscr.lescotranslator.Logic.DB.DataBaseOperator;
 import com.example.alexiscr.lescotranslator.R;
 
 import java.util.ArrayList;
@@ -41,8 +43,10 @@ public class RecorderActivity extends AppCompatActivity {
     }
 
     public void onClickTranslate(View v) {
+        ArrayList<LescoObject> lescoObjectArrayList = DataBaseOperator.stringToLescoObjectArrayList(textViewResult.getText().toString());
         Intent mainIntent = new Intent().setClass(
                 RecorderActivity.this, TranslatorActivity.class);
+        //mainIntent.putExtra("lescoObjectArrayList", lescoObjectArrayList);
         startActivity(mainIntent);
     }
 

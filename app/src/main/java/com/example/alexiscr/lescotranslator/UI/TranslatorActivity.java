@@ -13,8 +13,11 @@ import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.ViewSwitcher;
 
+import com.example.alexiscr.lescotranslator.Logic.Core.ImageConverter;
+import com.example.alexiscr.lescotranslator.Logic.Core.LescoObject;
 import com.example.alexiscr.lescotranslator.R;
 
+import java.util.ArrayList;
 
 
 public class TranslatorActivity extends AppCompatActivity {
@@ -22,6 +25,8 @@ public class TranslatorActivity extends AppCompatActivity {
     private ImageButton b1,b2;
     Bitmap bitmap;
     private static final long IMAGE_DELAY = 4000;
+    private ArrayList<LescoObject> lescoObjectArrayList;
+    private int index;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,18 +49,26 @@ public class TranslatorActivity extends AppCompatActivity {
         });
 
 
-       // sw.setImageDrawable(new BitmapDrawable(this.getResources(), bitmap));
-        sw.setImageResource(R.drawable.u);
+        Bundle extras = getIntent().getExtras();
+        if(extras != null){
+            lescoObjectArrayList = extras.getParcelable("lescoObjectArrayList");
+        }
 
-        sw.postDelayed(new Runnable() {
+        for(;index< lescoObjectArrayList.size();index ++){
+            sw.postDelayed(new Runnable() {
 
-            @Override
-            public void run() {
-                sw.setImageResource(R.drawable.g);
-            }
+                @Override
+                public void run() {
+                    sw.setImageDrawable(new BitmapDrawable(ImageConverter.byteArrayToBitmap(lescoObjectArrayList.get(index).getImage())));
+                }
+            }, 5000);
+
+        }
 
 
-        }, 5000);
+        // sw.setImageDrawable(new BitmapDrawable(this.getResources(), bitmap));
+        //sw.setImageResource(R.drawable.u);
+
 
 
 
