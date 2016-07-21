@@ -48,7 +48,7 @@ public class TranslatorActivity extends AppCompatActivity {
             }
         });
 
-
+        /*
         Bundle extras = getIntent().getExtras();
         if(extras != null){
             lescoObjectArrayList = extras.getParcelable("lescoObjectArrayList");
@@ -64,10 +64,10 @@ public class TranslatorActivity extends AppCompatActivity {
             }, 5000);
 
         }
+        */
 
-
-        // sw.setImageDrawable(new BitmapDrawable(this.getResources(), bitmap));
-        //sw.setImageResource(R.drawable.u);
+         sw.setImageDrawable(new BitmapDrawable(this.getResources(), bitmap));
+        sw.setImageResource(R.drawable.u);
 
 
 

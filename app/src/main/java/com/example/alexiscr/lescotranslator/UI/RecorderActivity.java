@@ -43,14 +43,18 @@ public class RecorderActivity extends AppCompatActivity {
     }
 
     public void onClickTranslate(View v) {
-        ArrayList<LescoObject> lescoObjectArrayList = DataBaseOperator.stringToLescoObjectArrayList(textViewResult.getText().toString());
-        Intent mainIntent = new Intent().setClass(
-                RecorderActivity.this, TranslatorActivity.class);
-        //mainIntent.putExtra("lescoObjectArrayList", lescoObjectArrayList);
-        startActivity(mainIntent);
+       /// ArrayList<LescoObject> lescoObjectArrayList = DataBaseOperator.stringToLescoObjectArrayList(textViewResult.getText().toString());
+        Intent in = new Intent( RecorderActivity.this, TranslatorActivity.class);
+    //   mainIntent.putExtra("lescoObjectArrayList", lescoObjectArrayList);
+        startActivity(in);
     }
 
-    private void startSpeechInput(){
+    public void translate(View v) {
+        Intent in = new Intent( RecorderActivity.this, TranslatorActivity.class);
+        startActivity(in);
+    }
+
+        private void startSpeechInput(){
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                 RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
