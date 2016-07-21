@@ -43,16 +43,16 @@ public class RecorderActivity extends AppCompatActivity {
     }
 
     public void onClickTranslate(View v) {
-       /// ArrayList<LescoObject> lescoObjectArrayList = DataBaseOperator.stringToLescoObjectArrayList(textViewResult.getText().toString());
         Intent in = new Intent( RecorderActivity.this, TranslatorActivity.class);
-    //   mainIntent.putExtra("lescoObjectArrayList", lescoObjectArrayList);
+     //   in.putExtra("words",textViewResult.getText().toString() );
         startActivity(in);
     }
 
     public void translate(View v) {
         Intent in = new Intent( RecorderActivity.this, TranslatorActivity.class);
+        in.putExtra("words",textViewResult.getText().toString() );
         startActivity(in);
-    }
+     }
 
         private void startSpeechInput(){
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);

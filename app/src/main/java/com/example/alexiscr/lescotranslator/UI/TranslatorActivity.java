@@ -3,6 +3,7 @@ package com.example.alexiscr.lescotranslator.UI;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.widget.ViewSwitcher;
 
 import com.example.alexiscr.lescotranslator.Logic.Core.ImageConverter;
 import com.example.alexiscr.lescotranslator.Logic.Core.LescoObject;
+import com.example.alexiscr.lescotranslator.Logic.DB.DataBaseOperator;
 import com.example.alexiscr.lescotranslator.R;
 
 import java.util.ArrayList;
@@ -26,7 +28,7 @@ public class TranslatorActivity extends AppCompatActivity {
     Bitmap bitmap;
     private static final long IMAGE_DELAY = 4000;
     private ArrayList<LescoObject> lescoObjectArrayList;
-    private int index;
+    private int index = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,43 +50,63 @@ public class TranslatorActivity extends AppCompatActivity {
             }
         });
 
-        /*
+
+
         Bundle extras = getIntent().getExtras();
         if(extras != null){
-            lescoObjectArrayList = extras.getParcelable("lescoObjectArrayList");
+             lescoObjectArrayList = DataBaseOperator.stringToLescoObjectArrayList( extras.getString("words"));
         }
 
+
+        sw.setImageDrawable( new BitmapDrawable(getResources(), ImageConverter.byteArrayToBitmap(lescoObjectArrayList.get(index).getImage())));
+        index++;
+
+        /*
+        for(;index< lescoObjectArrayList.size();index ++){
+
+
+            sw.setImageDrawable(new BitmapDrawable(getResources(), ImageConverter.byteArrayToBitmap(lescoObjectArrayList.get(index).getImage())));
+
+
+        }
+        */
         for(;index< lescoObjectArrayList.size();index ++){
             sw.postDelayed(new Runnable() {
 
                 @Override
                 public void run() {
-                    sw.setImageDrawable(new BitmapDrawable(ImageConverter.byteArrayToBitmap(lescoObjectArrayList.get(index).getImage())));
+                    sw.setImageDrawable(new BitmapDrawable(getResources(), ImageConverter.byteArrayToBitmap(lescoObjectArrayList.get(index).getImage())));
                 }
             }, 5000);
 
         }
-        */
-
-         sw.setImageDrawable(new BitmapDrawable(this.getResources(), bitmap));
-        sw.setImageResource(R.drawable.u);
-
-
-
-
-
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sw.setImageResource(R.drawable.a);
+
+                if(index < lescoObjectArrayList.size() ) {
+                    index++;
+                    sw.setImageDrawable(new BitmapDrawable(getResources(), ImageConverter.byteArrayToBitmap(lescoObjectArrayList.get(index).getImage())));
+                }
+                else {
+
+                }
+
             }
         });
 
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View v) {
-                sw.setImageResource(R.drawable.g);
+                if(index > -1 ) {
+                    index--;
+                    sw.setImageDrawable(new BitmapDrawable(getResources(), ImageConverter.byteArrayToBitmap(lescoObjectArrayList.get(index).getImage())));
+                }
+                else {
+
+                }
             }
         });
     }
