@@ -6,4 +6,6 @@
     <string name="notification">Lo sentimos, su dispositivo no puede procesar información
         proveniente de un micrófono.</string>
     <string name="title_activity_translator">TranslatorActivity</string>
+    <string name="Greeting">Greeting</string>
+    <string name="greeting">Bienvenido ingrese la palabra que desea guardar:</string>
 </resources>

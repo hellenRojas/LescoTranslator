@@ -19,7 +19,7 @@ import java.util.Locale;
 
 public class RecorderActivity extends AppCompatActivity {
     private EditText textViewResult;
-    private Button btnTranslate;
+    private Button btnTranslate, butAddWord;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,12 +30,18 @@ public class RecorderActivity extends AppCompatActivity {
         btnTranslate = (Button) findViewById(R.id.btnTranslate);
         assert imageButtonMicrophone != null;
         new DataBaseInitializer().initializeDatabase(getApplicationContext());
+        butAddWord= (Button)findViewById(R.id.buttonAddWord);
     }
 
     public void onClickButton(View v) {
         switch (v.getId()){
             case R.id.imageButtonMicrophone:
                 startSpeechInput();
+                break;
+            case R.id.buttonAddWord:
+                Intent mainIntent = new Intent().setClass(
+                        RecorderActivity.this, AddWords.class);
+                startActivity(mainIntent);
                 break;
         }
     }
