@@ -17,7 +17,7 @@ import com.example.alexiscr.lescotranslator.R;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class RecorderActivity extends AppCompatActivity {
+public class RecorderActivity extends AppCompatActivity implements View.OnClickListener{
     private EditText textViewResult;
     private Button btnTranslate, butAddWord;
     @Override
@@ -31,6 +31,7 @@ public class RecorderActivity extends AppCompatActivity {
         assert imageButtonMicrophone != null;
         new DataBaseInitializer().initializeDatabase(getApplicationContext());
         butAddWord= (Button)findViewById(R.id.buttonAddWord);
+        butAddWord.setOnClickListener(this);
     }
 
     public void onClickButton(View v) {
@@ -80,4 +81,16 @@ public class RecorderActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.imageButtonMicrophone:
+                startSpeechInput();
+                break;
+            case R.id.buttonAddWord:
+                Intent mainIntent = new Intent(this, AddWords.class);
+                startActivity(mainIntent);
+                break;
+        }
+    }
 }

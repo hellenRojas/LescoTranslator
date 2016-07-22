@@ -47,7 +47,7 @@
         jar="C:\Users\Kim Morales\Documents\LescoTranslator\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="136e594b6c6618f36100eca06e999ae1ba003abf">
+        sha1="2388ab3f6ac4cf7b25904c7289fc89dbd848ef40">
         <dex dex="C:\Users\Kim Morales\Documents\LescoTranslator\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_4b910c344b0bc2587b3f3c6d7e0e044742de55a4\classes.dex" />
     </item>
     <item
@@ -82,7 +82,7 @@
         jar="C:\Users\Kim Morales\Documents\LescoTranslator\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="c4aa3c9ce0bf585990a79f2b94f22c25b3ee2270">
+        sha1="de012b60d14518c35f19376e14dee7e53417d7ef">
         <dex dex="C:\Users\Kim Morales\Documents\LescoTranslator\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_bca69733d8e4fcaf9ff44d9774037fd2a8735d95\classes.dex" />
     </item>
     <item
