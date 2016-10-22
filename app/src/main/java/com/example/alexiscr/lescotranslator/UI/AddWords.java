@@ -92,6 +92,8 @@ public class AddWords extends AppCompatActivity implements View.OnClickListener{
            Uri filePath = data.getData();
            // try {
                 //Getting the Bitmap from Gallery
+
+
         try {
             bitmap = MediaStore.Images.Media.getBitmap(getApplicationContext().getContentResolver(), filePath);
             imgVPhoto.setImageBitmap(bitmap);

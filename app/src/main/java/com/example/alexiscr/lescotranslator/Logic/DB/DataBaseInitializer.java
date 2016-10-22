@@ -2,17 +2,20 @@ package com.example.alexiscr.lescotranslator.Logic.DB;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-
-import com.example.alexiscr.lescotranslator.Logic.Core.ImageConverter;
-import com.example.alexiscr.lescotranslator.Logic.Core.LescoObject;
-import com.example.alexiscr.lescotranslator.R;
-import java.lang.reflect.Field;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import com.example.alexiscr.lescotranslator.Logic.Core.ImageConverter;
+import com.example.alexiscr.lescotranslator.Logic.Core.LescoObject;
+import com.example.alexiscr.lescotranslator.R;
+
+import java.lang.reflect.Field;
+
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
+import io.realm.RealmConfiguration.Builder;
+
 
 /**
  * Created by AlexisCR on 19/07/2016.
@@ -26,7 +29,7 @@ public class DataBaseInitializer extends AppCompatActivity {
         int resourceID;
         String temporalName;
         Bitmap temporalImage;
-        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder(context).build();
+        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder().build();
         Realm.setDefaultConfiguration(realmConfiguration);
         Realm realm = Realm.getDefaultInstance();
         for(int i = 0; i < fields.length; i++){
